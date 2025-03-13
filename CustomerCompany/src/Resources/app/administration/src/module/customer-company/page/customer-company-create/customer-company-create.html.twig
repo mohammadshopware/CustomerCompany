@@ -1,0 +1,25 @@
+<sw-page>
+    <template slot="smart-bar-actions">
+        <sw-button variant="primary" @click="onSave">
+            Save
+        </sw-button>
+    </template>
+
+    <template slot="content">
+        <sw-card>
+            <sw-field
+                :label="$tc('customerCompany.list.companyId')"
+                required>
+            </sw-field>
+            <sw-field
+                :label="$tc('customerCompany.list.companyId')"
+                required>
+            </sw-field>
+            <sw-field
+                :label="$tc('customerCompany.list.companyId')"
+                type="number"
+                required>
+            </sw-field>
+        </sw-card>
+    </template>
+</sw-page>

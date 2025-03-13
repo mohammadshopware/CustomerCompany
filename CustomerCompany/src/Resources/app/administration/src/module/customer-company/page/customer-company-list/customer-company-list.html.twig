@@ -1,0 +1,27 @@
+<sw-page>
+    <template slot="smart-bar-actions">
+        <sw-button variant="primary" @click="onAddCustomerCompany">
+            Add Customer Company
+        </sw-button>
+    </template>
+
+    <template slot="content">
+        <sw-card>
+            <sw-data-grid
+                :dataSource="customerCompanies"
+                :columns="columns"
+                :isLoading="isLoading"
+                @edit-item="onEditCustomerCompany"
+                @delete-item="onDeleteCustomerCompany">
+                <template #actions="{ item }">
+                    <sw-context-menu-item @click="onEditCustomerCompany(item.id)">
+                        Edit
+                    </sw-context-menu-item>
+                    <sw-context-menu-item variant="danger" @click="onDeleteCustomerCompany(item.id)">
+                        Delete
+                    </sw-context-menu-item>
+                </template>
+            </sw-data-grid>
+        </sw-card>
+    </template>
+</sw-page>

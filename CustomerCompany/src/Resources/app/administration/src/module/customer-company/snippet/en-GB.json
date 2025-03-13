@@ -1,0 +1,29 @@
+{
+    "customerCompany": {
+        "general": {
+            "mainMenuItemGeneral": "Manage customer companies",
+            "descriptionTextModule": "Manage customer companies"
+        },
+        "list" : {
+            "companyId" : "Company Id",
+            "columnCustomerNumber" : "Customer Number",
+            "companyName" : "Company Name",
+            "creditLimit" : "Credit Limit"
+        },
+        "button" : {
+            "save" : "save"
+        },
+        "success" : {
+            "title" : "Company saved",
+            "message" : "Company has been saved successfully"
+        },
+        "detail": {
+            "companyCardTitle": "Company",
+            "companyLabel": "Company",
+            "companyPlaceholder": "Select a company"
+        },
+        "field" : {
+            "label" : "Customer company"
+        }
+    }
+}

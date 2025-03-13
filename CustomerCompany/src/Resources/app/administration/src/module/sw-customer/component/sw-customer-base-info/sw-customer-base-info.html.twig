@@ -1,0 +1,55 @@
+{% block sw_customer_base_metadata_customer_group %}
+    <sw-description-list>
+        <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
+        {% block sw_customer_base_metadata_customer_group_label %}
+        <dt class="sw-customer-base-info__label">
+            {{ $tc('sw-customer.baseInfo.labelCustomerGroup') }}
+        </dt>
+        {% endblock %}
+
+        <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
+        {% block sw_customer_base_metadata_customer_group_content %}
+        <dd v-if="!customerEditMode">
+            {{ customer.group.translated.name }}
+        </dd>
+        {% endblock %}
+
+        <!-- eslint-disable-next-line sw-deprecation-rules/no-twigjs-blocks -->
+        {% block sw_customer_base_metadata_customer_group_editor %}
+        <dd v-else>
+            <sw-entity-single-select
+                v-model="customer.groupId"
+                entity="customer_group"
+                size="small"
+                show-clearable-button
+                :error="customerGroupIdError"
+            />
+        </dd>
+        {% endblock %}
+
+        {% block customer_company_base_label %}
+            <dt class="sw-customer-base-info__label">
+                {{ $tc('customerCompany.field.label') }}
+            </dt>
+        {% endblock %}
+
+        {% block customer_company_content %}
+            <dd v-if="!customerEditMode">
+                <!-- {{ customer.company.companyName }} -->
+            </dd>
+        {% endblock %}
+
+        {% block customer_company_editor %}
+            <dd v-else>
+                <sw-entity-single-select
+                    v-model="customer.companyId"
+                    entity="customer_company"
+                    size="small"
+                    show-clearable-button
+                    label-property="companyName"
+                    :error="customerGroupIdError"
+                />
+            </dd>
+        {% endblock %}
+    </sw-description-list>
+{% endblock %}

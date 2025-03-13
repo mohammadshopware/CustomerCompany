@@ -1,0 +1,33 @@
+{% block customer_company_details %}
+    <sw-page>
+        <template slot="smart-bar-actions">
+            <sw-button variant="primary" @click="onSave">
+                Save
+            </sw-button>
+        </template>
+
+        <template slot="content">
+            <sw-card>
+                <sw-field
+                    v-model="customerCompany.companyId"
+                    :label="$tc('customerCompany.list.companyId')"
+                    :placeholder="$tc('customerCompany.list.companyId')"
+                    required="required">
+                </sw-field>
+                <sw-field
+                    v-model="customerCompany.companyName"
+                    :label="$tc('customerCompany.list.companyName')"
+                    :placeholder="$tc('customerCompany.list.companyName')"
+                    required="required">
+                </sw-field>
+                <sw-field
+                    v-model="customerCompany.creditLimit"
+                    :label="$tc('customerCompany.list.creditLimit')"
+                    :placeholder="$tc('customerCompany.list.creditLimit')"
+                    type="number"
+                    required="required">
+                </sw-field>
+            </sw-card>
+        </template>
+    </sw-page>
+{% endblock %}

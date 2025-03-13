@@ -1,0 +1,16 @@
+{
+    "customerCompany": {
+        "search": {
+            "title": "Search by company-ID or company-name",
+            "placeholder": "Enter company ID or name...",
+            "button": "Search",
+            "resultsTitle": "Search Results",
+            "resultsText": "Showing results for: %query%"
+        },
+        "table" :  {
+            "name":"Name",
+            "email":"Email",
+            "not_foud" : "No customers found."
+        }
+    }
+}
