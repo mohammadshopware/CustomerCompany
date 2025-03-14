@@ -8,7 +8,7 @@ class SearchPage extends Page
 {
     protected $customersResult;
 
-    protected $responseData;
+    protected $responseData = [];
 
     public function getCustomersResult() : EntityCollection
     {
